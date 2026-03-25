@@ -541,7 +541,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 .treatments-grid-4 {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .treatment-card {
