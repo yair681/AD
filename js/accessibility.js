@@ -113,12 +113,12 @@
 
   // ── פונט ──
   const FONT_STEPS = ['קטן מאוד', 'קטן', 'גודל רגיל', 'גדול', 'גדול מאוד'];
-  const FONT_SIZES = [12, 14, 16, 19, 22]; // px base
-  let fontLevel = 2; // default = index 2 = 16px
+  const ZOOM_LEVELS = [0.8, 0.9, 1, 1.15, 1.3];
+  let fontLevel = 2; // default = index 2 = 100%
 
   function applyFontSize(level) {
     fontLevel = Math.max(0, Math.min(4, level));
-    document.documentElement.style.fontSize = FONT_SIZES[fontLevel] + 'px';
+    document.documentElement.style.zoom = ZOOM_LEVELS[fontLevel];
     const label = document.getElementById('acc-font-label');
     if (label) label.textContent = FONT_STEPS[fontLevel];
   }
@@ -151,11 +151,24 @@
   function initReadingGuide() {
     const guide = document.getElementById('acc-reading-guide');
     if (!guide) return;
+
+    function updateGuide(y) {
+      guide.style.top = (y - 20) + 'px';
+    }
+
     document.addEventListener('mousemove', (e) => {
       if (document.body.classList.contains('acc-reading-guide-on')) {
-        guide.style.top = (e.clientY - 20) + 'px';
+        updateGuide(e.clientY);
       }
     });
+
+    // כשמפעילים — מייד ממקם במרכז המסך
+    const observer = new MutationObserver(() => {
+      if (document.body.classList.contains('acc-reading-guide-on')) {
+        updateGuide(window.innerHeight / 2);
+      }
+    });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   }
 
   // ── init ──
@@ -242,6 +255,7 @@
       state.font = 2;
       applyAll(state);
       applyFontSize(2);
+      document.documentElement.style.zoom = 1;
       saveState(state);
     });
   }
