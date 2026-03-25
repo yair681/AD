@@ -7,6 +7,7 @@
   'use strict';
 
   const STORAGE_KEY = 'royal_med_acc';
+  const ROOT = window.location.pathname.includes('/treatments/') ? '../' : '';
 
   // ── הזרקת HTML ──
   function injectHTML() {
@@ -90,7 +91,7 @@
         </div>
 
         <button class="acc-reset" id="acc-reset" aria-label="אפס כל הגדרות נגישות">↺ אפס הכל</button>
-        <a href="accessibility-statement.html" class="acc-statement">הצהרת נגישות</a>
+        <a href="${ROOT}accessibility-statement.html" class="acc-statement">הצהרת נגישות</a>
       </div>`;
     document.body.appendChild(panel);
   }

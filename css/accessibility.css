@@ -187,13 +187,14 @@ body.acc-high-contrast {
   background: #000 !important;
   color: #fff !important;
 }
-body.acc-high-contrast * {
+body.acc-high-contrast *:not(#acc-panel):not(#acc-panel *):not(#acc-toggle):not(#acc-reading-guide) {
   background-color: #000 !important;
   color: #fff !important;
   border-color: #fff !important;
 }
-body.acc-high-contrast a { color: #ffff00 !important; }
-body.acc-high-contrast .btn, body.acc-high-contrast button {
+body.acc-high-contrast a:not(#acc-panel a) { color: #ffff00 !important; }
+body.acc-high-contrast .btn:not(#acc-panel .btn),
+body.acc-high-contrast button:not(#acc-panel button):not(#acc-toggle) {
   background: #fff !important;
   color: #000 !important;
   border: 2px solid #fff !important;
@@ -202,9 +203,13 @@ body.acc-high-contrast .btn, body.acc-high-contrast button {
 /* ניגודיות הפוכה */
 body.acc-inverted { filter: invert(1) hue-rotate(180deg); }
 body.acc-inverted img, body.acc-inverted video { filter: invert(1) hue-rotate(180deg); }
+body.acc-inverted #acc-panel,
+body.acc-inverted #acc-toggle { filter: invert(1) hue-rotate(180deg); }
 
 /* גווני אפור */
 body.acc-grayscale { filter: grayscale(1); }
+/* שניהם פעילים */
+body.acc-inverted.acc-grayscale { filter: invert(1) hue-rotate(180deg) grayscale(1); }
 
 /* הדגשת קישורים */
 body.acc-highlight-links a {
@@ -223,10 +228,10 @@ body.acc-readable-font * {
   line-height: 1.9 !important;
 }
 
-/* עצירת אנימציות */
-body.acc-stop-animations *,
-body.acc-stop-animations *::before,
-body.acc-stop-animations *::after {
+/* עצירת אנימציות — לא כולל את הפאנל ואת הטוגל שלו */
+body.acc-stop-animations *:not(#acc-panel):not(#acc-toggle),
+body.acc-stop-animations *:not(#acc-panel):not(#acc-toggle)::before,
+body.acc-stop-animations *:not(#acc-panel):not(#acc-toggle)::after {
   animation: none !important;
   transition: none !important;
 }
