@@ -1210,6 +1210,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .main-nav { display: none; }
   .hamburger { display: flex; }
   .mobile-menu { display: block; }
+  .logo-sub { display: none; }
   .home-hero-inner { grid-template-columns: 1fr; gap: 36px; }
   .hero-card { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
