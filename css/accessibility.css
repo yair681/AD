@@ -1,0 +1,277 @@
+/* =============================================
+   ROYAL-MED – סרגל נגישות
+   תואם תקן IS 5568 ו-WCAG 2.1 AA
+   ============================================= */
+
+/* ── כפתור פתיחה ── */
+#acc-toggle {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  background: #1a3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  width: 44px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: .06em;
+  box-shadow: 2px 0 12px rgba(0,0,0,.2);
+  transition: background .2s;
+}
+#acc-toggle:hover { background: #2a9d8f; }
+#acc-toggle svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; writing-mode: horizontal-tb; }
+
+/* ── פאנל ── */
+#acc-panel {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-320px);
+  z-index: 9998;
+  background: #fff;
+  border: 2px solid #1a3a5c;
+  border-radius: 0 12px 12px 0;
+  width: 300px;
+  box-shadow: 4px 0 24px rgba(0,0,0,.18);
+  transition: transform .3s ease;
+  font-family: 'Heebo', sans-serif;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+#acc-panel.open {
+  transform: translateY(-50%) translateX(44px);
+}
+
+.acc-header {
+  background: #1a3a5c;
+  color: #fff;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 10px 0 0;
+}
+.acc-header h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+.acc-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  opacity: .8;
+}
+.acc-close:hover { opacity: 1; }
+
+.acc-body { padding: 16px; }
+
+.acc-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7a8d;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 16px 0 8px;
+}
+.acc-section-title:first-child { margin-top: 0; }
+
+.acc-btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.acc-btn {
+  background: #f5f7fa;
+  border: 1.5px solid #eef1f5;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e2d3d;
+  cursor: pointer;
+  font-family: 'Heebo', sans-serif;
+  text-align: center;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.acc-btn span.acc-icon { font-size: 18px; }
+.acc-btn:hover { background: #e8f7f5; border-color: #2a9d8f; color: #2a9d8f; }
+.acc-btn.active { background: #1a3a5c; border-color: #1a3a5c; color: #fff; }
+
+.acc-font-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.acc-font-btn {
+  background: #f5f7fa;
+  border: 1.5px solid #eef1f5;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e2d3d;
+  cursor: pointer;
+  font-family: 'Heebo', sans-serif;
+  transition: all .2s;
+  flex-shrink: 0;
+}
+.acc-font-btn:hover { background: #e8f7f5; border-color: #2a9d8f; }
+.acc-font-label {
+  font-size: 13px;
+  color: #6b7a8d;
+  flex: 1;
+  text-align: center;
+}
+
+.acc-reset {
+  width: 100%;
+  margin-top: 14px;
+  padding: 10px;
+  background: #f5f7fa;
+  border: 1.5px solid #eef1f5;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7a8d;
+  cursor: pointer;
+  font-family: 'Heebo', sans-serif;
+  transition: all .2s;
+}
+.acc-reset:hover { background: #fee2e2; border-color: #f87171; color: #dc2626; }
+
+.acc-statement {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #2a9d8f;
+  margin-top: 12px;
+  text-decoration: underline;
+}
+
+.acc-divider {
+  border: none;
+  border-top: 1px solid #eef1f5;
+  margin: 12px 0;
+}
+
+/* ── מצבי נגישות פעילים ── */
+
+/* ניגודיות גבוהה */
+body.acc-high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+body.acc-high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+body.acc-high-contrast a { color: #ffff00 !important; }
+body.acc-high-contrast .btn, body.acc-high-contrast button {
+  background: #fff !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+/* ניגודיות הפוכה */
+body.acc-inverted { filter: invert(1) hue-rotate(180deg); }
+body.acc-inverted img, body.acc-inverted video { filter: invert(1) hue-rotate(180deg); }
+
+/* גווני אפור */
+body.acc-grayscale { filter: grayscale(1); }
+
+/* הדגשת קישורים */
+body.acc-highlight-links a {
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+  outline: 2px solid #2a9d8f !important;
+  outline-offset: 2px;
+}
+
+/* פונט קריא (דיסלקציה) */
+body.acc-readable-font,
+body.acc-readable-font * {
+  font-family: Arial, sans-serif !important;
+  letter-spacing: .06em !important;
+  word-spacing: .12em !important;
+  line-height: 1.9 !important;
+}
+
+/* עצירת אנימציות */
+body.acc-stop-animations *,
+body.acc-stop-animations *::before,
+body.acc-stop-animations *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* מדריך קריאה */
+#acc-reading-guide {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(255, 255, 0, 0.25);
+  border-top: 2px solid #f59e0b;
+  border-bottom: 2px solid #f59e0b;
+  pointer-events: none;
+  z-index: 9990;
+  transition: top .05s;
+}
+body.acc-reading-guide-on #acc-reading-guide { display: block; }
+
+/* פוקוס גלוי */
+body.acc-focus-visible *:focus {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px !important;
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  background: #1a3a5c;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: 99999;
+  border-radius: 0 0 8px 0;
+  transition: top .2s;
+  font-family: 'Heebo', sans-serif;
+}
+.skip-to-content:focus { top: 0; }
+
+/* ── ריספונסיב ── */
+@media (max-width: 640px) {
+  #acc-panel { width: 260px; }
+  #acc-panel.open { transform: translateY(-50%) translateX(44px); }
+}
