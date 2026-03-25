@@ -280,4 +280,6 @@ body.acc-focus-visible *:focus {
 @media (max-width: 640px) {
   #acc-panel { width: 260px; }
   #acc-panel.open { transform: translateY(-50%) translateX(44px); }
+  #acc-toggle { width: 36px; height: 80px; font-size: 10px; }
+  #acc-toggle svg { width: 18px; height: 18px; }
 }
