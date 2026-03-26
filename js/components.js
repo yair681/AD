@@ -303,4 +303,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Inject chatbot CSS + JS dynamically
+  if (!document.getElementById('rm-chatbot-css')) {
+    const link = document.createElement('link');
+    link.id   = 'rm-chatbot-css';
+    link.rel  = 'stylesheet';
+    link.href = `${ROOT}css/chatbot.css`;
+    document.head.appendChild(link);
+  }
+  if (!document.getElementById('rm-chatbot-js')) {
+    const script = document.createElement('script');
+    script.id  = 'rm-chatbot-js';
+    script.src = `${ROOT}js/chatbot.js`;
+    document.body.appendChild(script);
+  }
 });
