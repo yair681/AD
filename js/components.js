@@ -252,6 +252,14 @@ function getFooter() {
   </div>
 </footer>
 
+<!-- Floating Language Switcher -->
+<div class="lang-float" id="langFloat">
+  <button class="lang-float-btn lang-btn" data-lang="he">עב</button>
+  <button class="lang-float-btn lang-btn" data-lang="en">EN</button>
+  <button class="lang-float-btn lang-btn" data-lang="ar">عر</button>
+  <button class="lang-float-btn lang-btn" data-lang="ru">RU</button>
+</div>
+
 <!-- Floating WhatsApp -->
 <a href="${WA_LINK}" target="_blank" rel="noopener" class="wa-float" aria-label="פנה אלינו ב-WhatsApp">
   <div style="position:relative">

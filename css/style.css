@@ -332,6 +332,45 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .lang-btn:hover { background: var(--teal-pale); }
 .lang-btn.active { color: var(--teal); font-weight: 700; }
 
+/* ── Floating Language Switcher (always visible) ── */
+.lang-float {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  box-shadow: 2px 0 12px rgba(0,0,0,.15);
+}
+[dir="ltr"] .lang-float {
+  left: auto;
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.lang-float-btn {
+  display: block;
+  width: 42px;
+  padding: 9px 0;
+  text-align: center;
+  background: var(--white);
+  border: none;
+  border-bottom: 1px solid #e8eef5;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  font-family: inherit;
+  transition: background .15s, color .15s;
+  letter-spacing: .02em;
+}
+.lang-float-btn:last-child { border-bottom: none; }
+.lang-float-btn:hover { background: var(--teal-pale); color: var(--teal); }
+.lang-float-btn.active { background: var(--teal); color: var(--white); }
+
 /* Mobile language row */
 .mobile-lang-row {
   display: flex;
