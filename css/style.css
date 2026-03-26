@@ -185,15 +185,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 28px;
-  border: 2px solid;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: 800;
-  white-space: nowrap;
-  min-width: 130px;
+  padding: 8px 24px;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
   background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
 }
+.hmo-item img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter .3s;
+}
+.hmo-item:hover img { filter: grayscale(0%); }
 @keyframes hmo-scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }

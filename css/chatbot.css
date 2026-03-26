@@ -5,7 +5,7 @@
 #rm-chat-toggle {
   position: fixed;
   bottom: 28px;
-  left: 28px; /* ← bottom-left, above the WhatsApp bubble zone */
+  right: 28px;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -47,7 +47,7 @@
 #rm-chat-window {
   position: fixed;
   bottom: 100px;
-  left: 20px;
+  right: 20px;
   width: 360px;
   max-height: 520px;
   background: #fff;
@@ -237,5 +237,5 @@
     width: auto;
     bottom: 90px;
   }
-  #rm-chat-toggle { bottom: 20px; left: 20px; width: 52px; height: 52px; }
+  #rm-chat-toggle { bottom: 20px; right: 20px; width: 52px; height: 52px; }
 }
