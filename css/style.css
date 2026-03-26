@@ -402,37 +402,56 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* ── HOME HERO ── */
 .home-hero {
-  background: linear-gradient(135deg, #0a1937 0%, var(--navy) 60%, #1e5fa0 100%);
-  background-image: url('../images/hero-bg.jpg');
-  background-size: cover;
-  background-position: left center;
-  background-repeat: no-repeat;
-  min-height: clamp(500px, 60vw, 88vh);
+  background: #0a1937;
+  min-height: clamp(500px, 58vw, 88vh);
   padding: 80px 0 60px;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
+/* תמונת רקע — img מוחבא כ-background */
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
 .home-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to left,
-    rgba(10,25,55,.82) 0%,
-    rgba(10,25,55,.65) 45%,
-    rgba(10,25,55,.35) 100%);
+    rgba(10,25,55,.80) 0%,
+    rgba(10,25,55,.60) 45%,
+    rgba(10,25,55,.30) 100%);
   z-index: 1;
 }
-/* מובייל — gradient נקי בלי תמונה */
+/* מובייל — תמונה למעלה, טקסט למטה */
 @media (max-width: 768px) {
   .home-hero {
-    background-image: none;
-    background: linear-gradient(160deg, #0d2248 0%, #1a4a8c 55%, #1e6ab0 100%);
+    flex-direction: column;
+    align-items: stretch;
     min-height: auto;
-    padding: 100px 0 70px;
+    padding: 0;
+  }
+  .hero-bg-img {
+    position: relative;
+    height: 52vw;
+    min-height: 220px;
+    max-height: 320px;
+    object-position: center 25%;
   }
   .home-hero::before { display: none; }
+  .home-hero .container {
+    background: linear-gradient(160deg, #0d2248 0%, #1a4a8c 60%, #1e6ab0 100%);
+    padding-top: 36px;
+    padding-bottom: 44px;
+    z-index: 2;
+  }
 }
 .home-hero .container {
   position: relative;
