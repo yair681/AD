@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!document.getElementById('rm-i18n-js')) {
     const script = document.createElement('script');
     script.id  = 'rm-i18n-js';
-    script.src = `${ROOT}js/i18n.js`;
+    script.src = `${ROOT}js/i18n.js?v=2`;
     document.body.appendChild(script);
   }
 

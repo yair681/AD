@@ -296,15 +296,18 @@ const I18N = {
   }
 };
 
-// Run after DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Small delay so components.js injects header first
-  setTimeout(() => {
-    I18N.apply();
+// When loaded dynamically (injected by components.js), DOMContentLoaded has
+// already fired — run directly. Components have already been injected.
+(function initI18N() {
+  I18N.apply();
 
-    // Attach click handlers to language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => I18N.setLang(btn.dataset.lang));
+  // Attach click handlers to language buttons (nav + mobile)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      I18N.setLang(btn.dataset.lang);
+      // Close desktop dropdown
+      const switcher = document.getElementById('langSwitcher');
+      if (switcher) switcher.classList.remove('open');
     });
-  }, 80);
-});
+  });
+})();
