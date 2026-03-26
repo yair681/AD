@@ -1282,17 +1282,22 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-color: var(--navy);
 }
 .coc-top {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 56px;
+  height: 200px;
   position: relative;
   overflow: hidden;
+  background: #e8edf5;
 }
-.coc-top-face { background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%); }
-.coc-top-hair { background: linear-gradient(135deg, #fef3e2 0%, #fde9c5 100%); }
-.coc-top-body { background: linear-gradient(135deg, #e8f7f5 0%, #d0f0ec 100%); }
+.coc-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform .4s ease;
+  display: block;
+}
+.cat-overview-card:hover .coc-top img {
+  transform: scale(1.05);
+}
 .coc-body { padding: 24px; }
 .coc-title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .coc-desc { font-size: 14px; color: var(--gray-text); line-height: 1.6; margin-bottom: 14px; }
