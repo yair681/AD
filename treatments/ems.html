@@ -7,6 +7,12 @@
   <meta name="description" content="EMS – גירוי שרירים אלקטרומגנטי מתקדם למיצוק, עיצוב גוף וחיזוק שרירים ללא מאמץ. רויאל-מד ישראל.">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/accessibility.css">
+  <style>
+    .treat-gallery { display:flex; gap:0; height:300px; overflow:hidden; border-radius:var(--radius-lg); margin-bottom:0; }
+    .treat-gallery-img { flex:1; overflow:hidden; }
+    .treat-gallery-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    @media(max-width:600px){ .treat-gallery { flex-direction:column; height:auto; } .treat-gallery-img { height:200px; } }
+  </style>
 </head>
 <body data-page="body">
 <div id="site-header-placeholder"></div>
@@ -30,6 +36,12 @@
     <p>גירוי שרירים אלקטרומגנטי מתקדם לתוצאות מדידות</p>
   </div>
 </section>
+
+<div class="treat-gallery">
+    <div class="treat-gallery-img"><img src="../images/ems-1.jpg" alt=""></div>
+    <div class="treat-gallery-img"><img src="../images/ems-2.jpg" alt=""></div>
+    <div class="treat-gallery-img"><img src="../images/ems-3.jpg" alt=""></div>
+</div>
 
 <section class="section-pad bg-gray">
   <div class="container">
