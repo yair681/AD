@@ -621,6 +621,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   object-position: center top;
   display: block;
 }
+@media (max-width: 900px) {
+  .about-visual { min-height: unset; }
+  .about-lab-img-wrap { min-height: unset; height: auto; }
+  .about-lab-img-wrap img { height: auto; object-fit: unset; }
+}
 .av-title { font-size: 20px; font-weight: 700; margin-bottom: 32px; }
 .av-item {
   display: flex;
