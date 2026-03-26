@@ -28,7 +28,7 @@
   --radius-lg:  16px;
   --transition: .25s ease;
   --max-width:  1200px;
-  --header-h:   72px;
+  --header-h:   90px;
 }
 
 html { direction: rtl; scroll-behavior: smooth; overflow-x: hidden; }
@@ -143,11 +143,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-decoration: none;
 }
 .logo-img {
-  height: 52px;
+  height: 76px;
   width: auto;
   object-fit: contain;
 }
-@media (max-width: 900px) { .logo-img { height: 42px; } }
+@media (max-width: 900px) { .logo-img { height: 56px; } }
 
 /* ── HMO ROLLER ── */
 .hmo-roller-wrap {
@@ -1283,7 +1283,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 @media (max-width: 640px) {
-  :root { --header-h: 62px; }
+  :root { --header-h: 72px; }
   .section-pad { padding: 56px 0; }
   .section-pad-sm { padding: 40px 0; }
   .home-hero { padding: 72px 0 60px; }
