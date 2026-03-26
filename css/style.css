@@ -402,12 +402,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* ── HOME HERO ── */
 .home-hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1e6ab0 100%);
+  background-color: var(--navy-dark);
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center 30%;
   background-repeat: no-repeat;
-  min-height: clamp(420px, 66.67vw, 88vh);
+  min-height: clamp(520px, 70vw, 90vh);
   padding: 80px 0 60px;
   position: relative;
   overflow: hidden;
@@ -418,8 +418,20 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, rgba(10,25,55,.55) 0%, rgba(10,25,55,.3) 55%, rgba(10,25,55,.1) 100%);
+  background: linear-gradient(to bottom,
+    rgba(10,25,55,.3) 0%,
+    rgba(10,25,55,.55) 50%,
+    rgba(10,25,55,.75) 100%);
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .home-hero {
+    background-position: 60% center;
+    min-height: 100svh;
+  }
+  .home-hero::before {
+    background: rgba(10,25,55,.55);
+  }
 }
 .home-hero .container {
   position: relative;
