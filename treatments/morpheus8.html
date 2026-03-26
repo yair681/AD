@@ -32,12 +32,21 @@
 </section>
 
 <section style="padding:0;background:#fff">
-  <div style="display:flex;gap:0;height:340px;overflow:hidden">
-    <div style="flex:1;overflow:hidden">
-      <img src="../images/morpheus8-1.jpg" alt="טיפול Morpheus 8 - לפני ואחרי" style="width:100%;height:100%;object-fit:cover">
+  <style>
+    .m8-gallery { display:flex; gap:0; height:340px; overflow:hidden; }
+    .m8-gallery-img { flex:1; overflow:hidden; }
+    .m8-gallery-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    @media(max-width:600px){
+      .m8-gallery { flex-direction:column; height:auto; }
+      .m8-gallery-img { height:220px; }
+    }
+  </style>
+  <div class="m8-gallery">
+    <div class="m8-gallery-img">
+      <img src="../images/morpheus8-1.jpg" alt="טיפול Morpheus 8 - לפני ואחרי">
     </div>
-    <div style="flex:1;overflow:hidden">
-      <img src="../images/morpheus8-2.jpg" alt="טיפול Morpheus 8 ברויאל-מד" style="width:100%;height:100%;object-fit:cover">
+    <div class="m8-gallery-img">
+      <img src="../images/morpheus8-2.jpg" alt="טיפול Morpheus 8 ברויאל-מד">
     </div>
   </div>
 </section>
