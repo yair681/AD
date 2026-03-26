@@ -418,7 +418,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left, rgba(10,25,55,.7) 0%, rgba(10,25,55,.5) 60%, rgba(10,25,55,.3) 100%);
+  background: linear-gradient(to left, rgba(10,25,55,.55) 0%, rgba(10,25,55,.3) 55%, rgba(10,25,55,.1) 100%);
   z-index: 1;
 }
 .home-hero .container {
