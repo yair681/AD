@@ -140,32 +140,56 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
 }
-.logo-icon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  border-radius: 10px;
+.logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 900px) { .logo-img { height: 42px; } }
+
+/* ── HMO ROLLER ── */
+.hmo-roller-wrap {
+  background: var(--white);
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+  padding: 20px 0;
+  overflow: hidden;
+}
+.hmo-roller-title {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-text);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hmo-track-outer { overflow: hidden; }
+.hmo-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: hmo-scroll 18s linear infinite;
+}
+.hmo-track:hover { animation-play-state: paused; }
+.hmo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-}
-.logo-icon svg { width: 26px; height: 26px; fill: var(--white); }
-.logo-text { line-height: 1.2; }
-.logo-name {
+  padding: 10px 28px;
+  border: 2px solid;
+  border-radius: 10px;
   font-size: 18px;
   font-weight: 800;
-  color: var(--navy);
-  display: block;
+  white-space: nowrap;
+  min-width: 130px;
+  background: var(--white);
 }
-.logo-sub {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--gray-text);
-  letter-spacing: .03em;
+@keyframes hmo-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* Main Nav */
