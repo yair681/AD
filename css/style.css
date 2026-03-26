@@ -184,15 +184,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .hmo-track:hover { animation-play-state: paused; }
 .hmo-item {
+  flex-shrink: 0;
+  width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 24px;
+  padding: 0 20px;
 }
 .hmo-item img {
-  height: 48px;
-  width: auto;
-  max-width: 160px;
+  display: block;
+  height: 44px;
+  width: 140px;
   object-fit: contain;
   filter: grayscale(20%);
   transition: filter .3s;
