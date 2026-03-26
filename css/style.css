@@ -402,12 +402,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* ── HOME HERO ── */
 .home-hero {
-  background-color: var(--navy-dark);
+  background: linear-gradient(135deg, #0a1937 0%, var(--navy) 60%, #1e5fa0 100%);
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: left center;
   background-repeat: no-repeat;
-  min-height: clamp(520px, 70vw, 90vh);
+  min-height: clamp(500px, 60vw, 88vh);
   padding: 80px 0 60px;
   position: relative;
   overflow: hidden;
@@ -418,20 +418,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-    rgba(10,25,55,.3) 0%,
-    rgba(10,25,55,.55) 50%,
-    rgba(10,25,55,.75) 100%);
+  background: linear-gradient(to left,
+    rgba(10,25,55,.82) 0%,
+    rgba(10,25,55,.65) 45%,
+    rgba(10,25,55,.35) 100%);
   z-index: 1;
 }
+/* מובייל — gradient נקי בלי תמונה */
 @media (max-width: 768px) {
   .home-hero {
-    background-position: 60% center;
-    min-height: 100svh;
+    background-image: none;
+    background: linear-gradient(160deg, #0d2248 0%, #1a4a8c 55%, #1e6ab0 100%);
+    min-height: auto;
+    padding: 100px 0 70px;
   }
-  .home-hero::before {
-    background: rgba(10,25,55,.55);
-  }
+  .home-hero::before { display: none; }
 }
 .home-hero .container {
   position: relative;
