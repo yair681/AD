@@ -403,9 +403,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* ── HOME HERO ── */
 .home-hero {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1e6ab0 100%);
-  padding: 100px 0 80px;
+  min-height: clamp(420px, 66.67vw, 88vh); /* matches 3:2 image ratio */
+  padding: 80px 0 60px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .home-hero::before {
   content: '';
