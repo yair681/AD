@@ -274,23 +274,24 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: flex;
   align-items: center;
   gap: 4px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,.35);
-  color: var(--white);
-  padding: 5px 10px;
+  background: var(--teal-pale);
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  padding: 5px 11px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
-  transition: background .2s, border-color .2s;
+  transition: background .2s, border-color .2s, color .2s;
   font-family: inherit;
   letter-spacing: .03em;
 }
 .lang-current-btn:hover {
-  background: rgba(255,255,255,.12);
-  border-color: rgba(255,255,255,.7);
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
 }
-.lang-current-btn svg { opacity: .7; transition: transform .2s; }
+.lang-current-btn svg { opacity: .8; transition: transform .2s; stroke: currentColor; }
 .lang-switcher.open .lang-current-btn svg { transform: rotate(180deg); }
 .lang-dropdown-panel {
   position: absolute;
