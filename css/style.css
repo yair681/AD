@@ -9,21 +9,21 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:       #1a3a5c;
-  --navy-dark:  #0f2540;
-  --navy-light: #2756a0;
-  --teal:       #2a9d8f;
-  --teal-light: #3bbfb0;
-  --teal-pale:  #e8f7f5;
-  --gray-bg:    #f5f7fa;
-  --gray-light: #eef1f5;
-  --gray-mid:   #c8d0db;
-  --gray-text:  #6b7a8d;
-  --text:       #1e2d3d;
+  --navy:       #1a5c35;
+  --navy-dark:  #0d3d22;
+  --navy-light: #2a8a50;
+  --teal:       #00a651;
+  --teal-light: #33b96b;
+  --teal-pale:  #e8f7ee;
+  --gray-bg:    #f5f7f5;
+  --gray-light: #edf2ee;
+  --gray-mid:   #c0ccc2;
+  --gray-text:  #5a6b5c;
+  --text:       #1a2b1e;
   --white:      #ffffff;
-  --shadow-sm:  0 2px 8px rgba(26,58,92,.08);
-  --shadow-md:  0 4px 20px rgba(26,58,92,.12);
-  --shadow-lg:  0 8px 40px rgba(26,58,92,.16);
+  --shadow-sm:  0 2px 8px rgba(26,92,53,.08);
+  --shadow-md:  0 4px 20px rgba(26,92,53,.12);
+  --shadow-lg:  0 8px 40px rgba(26,92,53,.16);
   --radius:     10px;
   --radius-lg:  16px;
   --transition: .25s ease;
@@ -365,7 +365,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* ── HOME HERO ── */
 .home-hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1e5080 100%);
+  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #1e8050 100%);
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
@@ -387,7 +387,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(42,157,143,.2);
+  background: rgba(0,166,81,.2);
   border: 1px solid rgba(42,157,143,.4);
   color: var(--teal-light);
   padding: 6px 14px;
