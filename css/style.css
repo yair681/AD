@@ -1386,6 +1386,24 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .mt-8 { margin-top: 32px; }
 
 /* ── RESPONSIVE ── */
+/* about results grid */
+.about-results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* treatment gallery - full images, no crop */
+.treat-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 0;
+}
+.treat-gallery-img { width: 100%; }
+.treat-gallery-img img { width: 100%; height: auto; display: block; border-radius: var(--radius-lg); }
+
 @media (max-width: 1100px) {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .treatments-grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -1399,6 +1417,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .home-hero-inner { grid-template-columns: 1fr; gap: 36px; }
   .hero-card { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-results-grid { grid-template-columns: 1fr; gap: 40px; }
   .treatment-layout { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
   .faq-layout { grid-template-columns: 1fr; }
