@@ -74,18 +74,12 @@ function getHeader(activePage) {
       </nav>
 
       <div class="header-actions">
-        <!-- Language Switcher -->
-        <div class="lang-switcher" id="langSwitcher">
-          <button class="lang-current-btn" id="langCurrentBtn" aria-label="Select language">
-            <span data-i18n="lang.abbr">עב</span>
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="lang-dropdown-panel" id="langPanel">
-            <button class="lang-btn" data-lang="he">עברית</button>
-            <button class="lang-btn" data-lang="en">English</button>
-            <button class="lang-btn" data-lang="ar">العربية</button>
-            <button class="lang-btn" data-lang="ru">Русский</button>
-          </div>
+        <!-- Language Tabs (always visible) -->
+        <div class="lang-tabs-wrap">
+          <button class="lang-btn" data-lang="he" title="עברית">עב</button>
+          <button class="lang-btn" data-lang="en" title="English">EN</button>
+          <button class="lang-btn" data-lang="ar" title="العربية">عر</button>
+          <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
         </div>
 
         <a href="${WA_LINK}" target="_blank" rel="noopener" class="wa-nav-btn">
@@ -102,6 +96,13 @@ function getHeader(activePage) {
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="תפריט נייד">
+  <!-- Language selector at top of mobile menu -->
+  <div class="mobile-lang-row top">
+    <button class="lang-btn" data-lang="he">עברית</button>
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="ar">عربية</button>
+    <button class="lang-btn" data-lang="ru">Русский</button>
+  </div>
   <div class="mobile-nav-item">
     <a href="${ROOT}index.html"><span data-i18n="nav.home">דף הבית</span></a>
   </div>
@@ -154,14 +155,6 @@ function getHeader(activePage) {
   </div>
   <div class="mobile-nav-item">
     <a href="${ROOT}contact.html"><span data-i18n="nav.contact">יצירת קשר</span></a>
-  </div>
-
-  <!-- Mobile Language Switcher -->
-  <div class="mobile-lang-row">
-    <button class="lang-btn" data-lang="he">עברית</button>
-    <button class="lang-btn" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="ar">عربية</button>
-    <button class="lang-btn" data-lang="ru">РУС</button>
   </div>
 
   <div class="mobile-wa">
@@ -252,14 +245,6 @@ function getFooter() {
   </div>
 </footer>
 
-<!-- Floating Language Switcher -->
-<div class="lang-float" id="langFloat">
-  <button class="lang-float-btn lang-btn" data-lang="he">עב</button>
-  <button class="lang-float-btn lang-btn" data-lang="en">EN</button>
-  <button class="lang-float-btn lang-btn" data-lang="ar">عر</button>
-  <button class="lang-float-btn lang-btn" data-lang="ru">RU</button>
-</div>
-
 <!-- Floating WhatsApp -->
 <a href="${WA_LINK}" target="_blank" rel="noopener" class="wa-float" aria-label="פנה אלינו ב-WhatsApp">
   <div style="position:relative">
@@ -306,20 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Language switcher dropdown toggle
-    const langSwitcher = document.getElementById('langSwitcher');
-    const langCurrentBtn = document.getElementById('langCurrentBtn');
-    if (langSwitcher && langCurrentBtn) {
-      langCurrentBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        langSwitcher.classList.toggle('open');
-      });
-      document.addEventListener('click', (e) => {
-        if (!langSwitcher.contains(e.target)) {
-          langSwitcher.classList.remove('open');
-        }
-      });
-    }
   }, 50);
 
   // Scroll animations
