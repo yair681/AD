@@ -9,12 +9,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:       #005DAA;
-  --navy-dark:  #004a8a;
-  --navy-light: #1a75cc;
-  --teal:       #78BE20;
-  --teal-light: #8ed020;
-  --teal-pale:  #f0f8e0;
+  --navy:       #006889;
+  --navy-dark:  #00516A;
+  --navy-light: #096F9F;
+  --teal:       #00AAE6;
+  --teal-light: #1699FC;
+  --teal-pale:  #e6f6fc;
   --gray-bg:    #f5f7fa;
   --gray-light: #eef1f5;
   --gray-mid:   #c8d0db;
@@ -22,9 +22,9 @@
   --text:       #333333;
   --white:      #ffffff;
   --orange:     #F29400;
-  --shadow-sm:  0 2px 8px rgba(0,93,170,.08);
-  --shadow-md:  0 4px 20px rgba(0,93,170,.12);
-  --shadow-lg:  0 8px 40px rgba(0,93,170,.16);
+  --shadow-sm:  0 2px 8px rgba(0,104,137,.08);
+  --shadow-md:  0 4px 20px rgba(0,104,137,.12);
+  --shadow-lg:  0 8px 40px rgba(0,104,137,.16);
   --radius:     10px;
   --radius-lg:  16px;
   --transition: .25s ease;
