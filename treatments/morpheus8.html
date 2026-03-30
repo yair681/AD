@@ -31,115 +31,10 @@
   </div>
 </section>
 
-<section style="padding:24px 0 0;background:#fff">
-  <style>
-    .m8-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      padding: 0 24px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .m8-gallery-item {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-    }
-    .m8-gallery-item img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-    .m8-gallery-item:hover img { transform: scale(1.05); }
-    .m8-gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      align-items: flex-end;
-      padding: 18px;
-    }
-    .m8-gallery-item:hover .m8-gallery-overlay { opacity: 1; }
-    .m8-gallery-caption {
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-    }
-    /* Lightbox */
-    .m8-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-    }
-    .m8-lightbox.open { display: flex; }
-    .m8-lightbox img {
-      max-width: 90vw;
-      max-height: 88vh;
-      border-radius: 12px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-    }
-    .m8-lightbox-close {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: #fff;
-      font-size: 32px;
-      cursor: pointer;
-      line-height: 1;
-      opacity: 0.8;
-    }
-    .m8-lightbox-close:hover { opacity: 1; }
-    @media(max-width:600px){
-      .m8-gallery { grid-template-columns: 1fr; padding: 0 16px; }
-      .m8-gallery-item img { height: 220px; }
-    }
-  </style>
-
-  <div class="m8-gallery">
-    <div class="m8-gallery-item" onclick="openLightbox('../images/morpheus8-1.jpg')">
-      <img src="../images/morpheus8-1.jpg" alt="טיפול Morpheus 8 - לפני ואחרי">
-      <div class="m8-gallery-overlay">
-        <span class="m8-gallery-caption">לפני ואחרי</span>
-      </div>
-    </div>
-    <div class="m8-gallery-item" onclick="openLightbox('../images/morpheus8-2.jpg')">
-      <img src="../images/morpheus8-2.jpg" alt="טיפול Morpheus 8 ברויאל-מד">
-      <div class="m8-gallery-overlay">
-        <span class="m8-gallery-caption">תוצאות הטיפול</span>
-      </div>
-    </div>
+<section style="padding:28px 0 0;background:#fff">
+  <div class="container">
+    <img src="../images/morpheus8-1.jpg" alt="טיפול Morpheus 8 ברויאל-מד" style="width:100%;border-radius:16px;display:block;max-height:420px;object-fit:cover">
   </div>
-
-  <!-- Lightbox -->
-  <div class="m8-lightbox" id="m8-lightbox" onclick="closeLightbox()">
-    <span class="m8-lightbox-close" onclick="closeLightbox()">✕</span>
-    <img id="m8-lightbox-img" src="" alt="">
-  </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById('m8-lightbox-img').src = src;
-      document.getElementById('m8-lightbox').classList.add('open');
-    }
-    function closeLightbox() {
-      document.getElementById('m8-lightbox').classList.remove('open');
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
-    });
-  </script>
 </section>
 
 <section class="section-pad bg-gray">
@@ -195,6 +90,7 @@
           <div class="treatment-section-title">
             <span class="ts-icon">📈</span> תוצאות צפויות
           </div>
+          <img src="../images/morpheus8-2.jpg" alt="תוצאות Morpheus 8 - לפני ואחרי" style="width:100%;border-radius:12px;display:block;margin-bottom:16px;max-height:360px;object-fit:cover">
           <p>הטיפול מיועד ליצירת שיפור הדרגתי ואיכותי בעור, כולל מיצוק, חידוש, שיפור מרקם, צמצום מראה נקבוביות ושיפור כללי של מראה העור.</p>
           <p style="margin-top:12px">התוצאות נבנות לאורך הסדרה, כאשר תהליך חידוש הקולגן ממשיך גם לאחר כל טיפול.</p>
           <p style="margin-top:12px">ככל שהמטופל/ת מתמיד/ה בפרוטוקול המומלץ, כך עולה הסיכוי להשגת תוצאה עמוקה, יציבה ומשמעותית יותר.</p>
