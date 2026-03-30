@@ -330,6 +330,70 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(script);
   }
 
+  // ── Google Translate ──────────────────────────────────────────────────────
+  // Hide GT toolbar & banner with CSS
+  if (!document.getElementById('rm-gt-style')) {
+    const style = document.createElement('style');
+    style.id = 'rm-gt-style';
+    style.textContent = `
+      .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame { display:none !important; }
+      body { top: 0 !important; }
+      .goog-te-gadget { display:none !important; }
+    `;
+    document.head.appendChild(style);
+  }
+
+  // Hidden container for GT widget
+  if (!document.getElementById('google_translate_element')) {
+    const gtDiv = document.createElement('div');
+    gtDiv.id = 'google_translate_element';
+    gtDiv.style.cssText = 'position:absolute;top:-9999px;left:-9999px;visibility:hidden;height:0;overflow:hidden';
+    document.body.appendChild(gtDiv);
+  }
+
+  // GT init callback
+  window.googleTranslateElementInit = function() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'he',
+      includedLanguages: 'en,ar,ru,he',
+      autoDisplay: false
+    }, 'google_translate_element');
+
+    // Auto-apply saved lang on page load
+    const saved = localStorage.getItem('rm-lang');
+    if (saved && saved !== 'he') {
+      setTimeout(() => _gtApply(saved), 800);
+    }
+  };
+
+  function _gtApply(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (!select) return;
+    if (lang === 'he') {
+      // Reset to original
+      select.value = '';
+      select.dispatchEvent(new Event('change'));
+    } else {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+  }
+
+  // Hook lang buttons → trigger GT
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.lang-btn');
+    if (!btn) return;
+    setTimeout(() => _gtApply(btn.dataset.lang), 150);
+  });
+
+  // Load GT script
+  if (!document.getElementById('rm-gt-script')) {
+    const s = document.createElement('script');
+    s.id  = 'rm-gt-script';
+    s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.body.appendChild(s);
+  }
+
   // Inject chatbot CSS + JS dynamically
   if (!document.getElementById('rm-chatbot-css')) {
     const link = document.createElement('link');
