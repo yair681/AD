@@ -457,7 +457,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .08em;
-  color: var(--teal-light);
+  color: rgba(255,255,255,0.9);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -1027,7 +1027,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   transition: var(--transition);
 }
 .faq-question:hover { background: var(--gray-bg); }
-.faq-item.open .faq-question { background: var(--teal-pale); color: var(--teal); }
+.faq-item.open .faq-question { background: var(--teal-pale); color: var(--navy); }
 .faq-icon {
   width: 24px;
   height: 24px;
@@ -1135,7 +1135,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   gap: 8px;
   background: var(--teal-pale);
-  color: var(--teal);
+  color: var(--navy);
   padding: 10px 16px;
   border-radius: 8px;
   font-size: 14px;
