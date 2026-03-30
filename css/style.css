@@ -1085,7 +1085,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .treatment-section-title .ts-icon { font-size: 20px; }
 .treatment-section p {
   font-size: 15px;
-  color: var(--text);
+  color: inherit;
   line-height: 1.75;
 }
 .treatment-list {
