@@ -154,6 +154,9 @@ function getHeader(activePage) {
     <a href="${ROOT}programs.html"><span data-i18n="nav.programs">תוכניות משולבות</span></a>
   </div>
   <div class="mobile-nav-item">
+    <a href="${ROOT}treatments/skin-diagnosis.html"><span>אבחון עור</span></a>
+  </div>
+  <div class="mobile-nav-item">
     <a href="${ROOT}faq.html"><span data-i18n="nav.faq">שאלות נפוצות</span></a>
   </div>
   <div class="mobile-nav-item">
