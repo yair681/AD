@@ -66,6 +66,9 @@ function getHeader(activePage) {
           <a href="${ROOT}programs.html" class="nav-link ${activePage==='programs'?'active':''}"><span data-i18n="nav.programs">תוכניות משולבות</span></a>
         </div>
         <div class="nav-item">
+          <a href="${ROOT}treatments/skin-diagnosis.html" class="nav-link ${activePage==='skin-diagnosis'?'active':''}"><span>אבחון עור</span></a>
+        </div>
+        <div class="nav-item">
           <a href="${ROOT}faq.html" class="nav-link ${activePage==='faq'?'active':''}"><span data-i18n="nav.faq">שאלות נפוצות</span></a>
         </div>
         <div class="nav-item">
