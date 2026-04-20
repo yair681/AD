@@ -181,8 +181,14 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   direction: ltr;
   width: max-content;
   animation: hmo-scroll 24s linear infinite;
+  animation-play-state: running !important;
   will-change: transform;
   backface-visibility: hidden;
+}
+.hmo-track:hover,
+.hmo-track:focus,
+.hmo-item:hover ~ .hmo-track {
+  animation-play-state: running !important;
 }
 .hmo-item {
   flex-shrink: 0;
