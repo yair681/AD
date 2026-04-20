@@ -177,6 +177,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hmo-track-outer {
   overflow: hidden;
   width: 100%;
+  direction: ltr;
 }
 .hmo-track {
   display: flex;
