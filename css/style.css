@@ -174,41 +174,32 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-.hmo-track-outer { overflow: hidden; }
+.hmo-track-outer {
+  overflow: hidden;
+  width: 100%;
+}
 .hmo-track {
   display: flex;
-  gap: 0;
+  flex-wrap: nowrap;
   direction: ltr;
   width: max-content;
-  animation: hmo-scroll 24s linear infinite;
-  animation-play-state: running !important;
+  animation: hmo-scroll 20s linear infinite;
   will-change: transform;
-  backface-visibility: hidden;
-}
-.hmo-track:hover,
-.hmo-track:focus,
-.hmo-item:hover ~ .hmo-track {
-  animation-play-state: running !important;
 }
 .hmo-item {
   flex-shrink: 0;
-  width: 160px;
-  margin-right: 32px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 12px;
 }
 .hmo-item img {
   display: block;
-  height: 48px;
-  width: auto;
-  max-width: 130px;
+  height: 50px;
+  width: 150px;
   object-fit: contain;
   filter: grayscale(15%);
-  transition: filter .3s;
 }
-.hmo-item:hover img { filter: grayscale(0%); }
 @keyframes hmo-scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
