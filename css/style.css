@@ -482,7 +482,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 /* תמונת רקע — img מוחבא כ-background */
 .hero-bg-img {
@@ -498,10 +498,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to left,
-    rgba(10,25,55,.80) 0%,
-    rgba(10,25,55,.60) 45%,
-    rgba(10,25,55,.30) 100%);
+  background: linear-gradient(to top,
+    rgba(10,25,55,.92) 0%,
+    rgba(10,25,55,.55) 50%,
+    rgba(10,25,55,.10) 100%);
   z-index: 1;
 }
 /* מובייל — תמונה למעלה, טקסט למטה */
@@ -533,7 +533,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .home-hero-inner {
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
+  width: 100%;
 }
 .home-hero-content .hero-tag {
   display: inline-flex;
