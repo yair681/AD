@@ -414,4 +414,11 @@ document.addEventListener('DOMContentLoaded', () => {
     script.src = `${ROOT}js/chatbot.js`;
     document.body.appendChild(script);
   }
+  if (!document.querySelector('link[rel="icon"]')) {
+    const favicon = document.createElement('link');
+    favicon.rel  = 'icon';
+    favicon.type = 'image/jpeg';
+    favicon.href = `${ROOT}images/logo.jpg`;
+    document.head.appendChild(favicon);
+  }
 });
