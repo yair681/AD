@@ -478,11 +478,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .home-hero {
   background: #0a1937;
   min-height: clamp(500px, 58vw, 88vh);
-  padding: 80px 0 60px;
+  padding: 0;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
 }
 /* תמונת רקע — img מוחבא כ-background */
 .hero-bg-img {
@@ -528,8 +526,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   }
 }
 .home-hero .container {
-  position: relative;
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
+  width: 100%;
 }
 .home-hero-inner {
   position: relative;
