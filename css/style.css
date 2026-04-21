@@ -196,8 +196,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .hmo-item img {
   display: block;
-  height: 50px;
-  width: 150px;
+  height: 60px;
+  width: auto;
+  max-width: 160px;
   object-fit: contain;
   filter: grayscale(15%);
 }
