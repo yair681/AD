@@ -533,8 +533,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 .home-hero-inner {
   position: relative;
-  max-width: 800px;
   width: 100%;
+  text-align: center;
+}
+.home-hero-content .hero-btns {
+  justify-content: center;
 }
 .home-hero-content .hero-tag {
   display: inline-flex;
