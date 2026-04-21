@@ -568,9 +568,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-shadow: 0 1px 4px rgba(0,0,0,.4);
   line-height: 1.8;
   margin-bottom: 36px;
-  max-width: 500px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
 .hero-card {
   background: rgba(255,255,255,.08);
