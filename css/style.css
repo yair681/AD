@@ -526,11 +526,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   }
   .home-hero::before { display: none; }
   .home-hero .container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     background: linear-gradient(160deg, #0d2248 0%, #1a4a8c 60%, #1e6ab0 100%);
     padding-top: 36px;
     padding-bottom: 44px;
     z-index: 2;
+    text-align: right;
   }
+  .home-hero-inner { text-align: right; }
 }
 .home-hero .container {
   position: absolute;
