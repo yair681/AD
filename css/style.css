@@ -535,6 +535,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     padding-bottom: 44px;
     z-index: 2;
   }
+  .home-hero-inner { text-align: right; }
+  .home-hero-content .hero-btns { justify-content: flex-end; }
 }
 .home-hero .container {
   position: absolute;
