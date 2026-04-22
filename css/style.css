@@ -200,7 +200,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: auto;
   max-width: 160px;
   object-fit: contain;
-  filter: grayscale(15%);
+}
+@media (max-width: 768px) {
+  .hmo-item img {
+    height: 50px;
+    width: 150px;
+    max-width: 150px;
+  }
 }
 @keyframes hmo-scroll {
   0%   { transform: translateX(0); }
