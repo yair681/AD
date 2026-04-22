@@ -283,18 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-health-ministry.jpg" alt="משרד הבריאות"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
       <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
-      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-health-ministry.jpg" alt="משרד הבריאות"></div>
     </div>
   </div>
 </div>`;
