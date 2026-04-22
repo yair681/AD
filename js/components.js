@@ -271,6 +271,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerEl = document.getElementById('site-footer-placeholder');
   if (footerEl) footerEl.innerHTML = getFooter();
 
+  const hmoEl = document.getElementById('hmo-roller-placeholder');
+  if (hmoEl) hmoEl.outerHTML = `<div class="hmo-roller-wrap">
+  <div class="container">
+    <div class="hmo-roller-headline">הבחירה הטבעית של קופות החולים לטיפולים אסתטיים</div>
+    <div class="hmo-roller-title">מטפלים עם מטופלים מכל קופות החולים</div>
+  </div>
+  <div class="hmo-track-outer">
+    <div class="hmo-track">
+      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-clalit.png" alt="כללית"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-maccabi.jpg" alt="מכבי"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-meuhedet.png" alt="מאוחדת"></div>
+      <div class="hmo-item"><img src="${ROOT}images/hmo-leumit.jpg" alt="לאומית"></div>
+    </div>
+  </div>
+</div>`;
+
   // Mobile menu toggle
   setTimeout(() => {
     const hamburger = document.getElementById('hamburger');
