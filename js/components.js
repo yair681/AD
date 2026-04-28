@@ -174,6 +174,21 @@ function getHeader(activePage) {
 
 function getFooter() {
   return `
+<div class="site-map-bar">
+  <div class="site-map-bar-head">
+    <div class="container">
+      <span class="tag">מיקום המרפאה</span>
+      <h3>איך מגיעים?</h3>
+      <p>שלושת בני עין חרוד 81, באר שבע</p>
+    </div>
+  </div>
+  <iframe
+    src="https://maps.google.com/maps?q=31.2393968,34.792562&hl=iw&z=17&output=embed"
+    width="100%" height="260" loading="lazy" allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade" title="מיקום רויאל-מד ישראל"
+    style="border:0;display:block">
+  </iframe>
+</div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -442,5 +457,29 @@ document.addEventListener('DOMContentLoaded', () => {
     favicon.type = 'image/jpeg';
     favicon.href = `${ROOT}images/logo.jpg`;
     document.head.appendChild(favicon);
+  }
+
+  // ── Treatment Gallery Slider ──────────────────────────
+  const gallery = document.querySelector('.treat-gallery');
+  if (gallery) {
+    const track = gallery.querySelector('.treat-gallery-track');
+    const slides = gallery.querySelectorAll('.treat-gallery-slide');
+    const dots = gallery.querySelectorAll('.treat-gallery-dot');
+    const total = slides.length;
+    let cur = 0, timer;
+
+    function goTo(n) {
+      cur = (n + total) % total;
+      track.style.transform = `translateX(${cur * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+    }
+
+    gallery.querySelector('.treat-gallery-btn.prev').addEventListener('click', () => { clearInterval(timer); goTo(cur - 1); startAuto(); });
+    gallery.querySelector('.treat-gallery-btn.next').addEventListener('click', () => { clearInterval(timer); goTo(cur + 1); startAuto(); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); startAuto(); }));
+
+    function startAuto() { timer = setInterval(() => goTo(cur + 1), 4000); }
+    goTo(0);
+    if (total > 1) startAuto();
   }
 });

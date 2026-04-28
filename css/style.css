@@ -197,8 +197,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hmo-item img {
   display: block;
   height: 60px;
-  width: auto;
-  max-width: 160px;
+  width: 140px;
+  max-width: 140px;
   object-fit: contain;
 }
 @media (max-width: 768px) {
@@ -1622,3 +1622,34 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   /* General */
   .container { padding: 0 16px; }
 }
+
+/* ── Treatment Image Gallery ───────────────────────────── */
+.treat-gallery { background: #000; position: relative; }
+.treat-gallery-inner { position: relative; overflow: hidden; }
+.treat-gallery-track { display: flex; transition: transform .4s cubic-bezier(.4,0,.2,1); }
+.treat-gallery-slide { flex-shrink: 0; width: 100%; }
+.treat-gallery-slide img { width: 100%; height: 400px; object-fit: cover; display: block; }
+.treat-gallery-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,.5); color: #fff; border: none; cursor: pointer;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 22px; line-height: 1;
+  display: flex; align-items: center; justify-content: center; z-index: 10;
+  transition: background .2s; padding: 0;
+}
+.treat-gallery-btn:hover { background: rgba(0,0,0,.8); }
+.treat-gallery-btn.prev { right: 14px; }
+.treat-gallery-btn.next { left: 14px; }
+.treat-gallery-dots { display: flex; justify-content: center; gap: 7px; padding: 10px 0; background: #111; }
+.treat-gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.35); border: none; cursor: pointer; transition: background .2s; padding: 0; }
+.treat-gallery-dot.active { background: #fff; }
+@media (max-width: 640px) {
+  .treat-gallery-slide img { height: 220px; }
+}
+
+/* ── Site-wide Map Bar (above footer) ─────────────────── */
+.site-map-bar { background: var(--gray-bg, #f4f7fb); }
+.site-map-bar-head { padding: 40px 0 20px; text-align: center; }
+.site-map-bar-head .tag { margin-bottom: 8px; display: inline-block; }
+.site-map-bar-head h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.site-map-bar-head p { font-size: 14px; color: var(--gray-text); }
+.site-map-bar iframe { display: block; border: 0; width: 100%; height: 260px; }
