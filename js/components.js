@@ -36,6 +36,7 @@ function getHeader(activePage) {
             <a href="${ROOT}treatments/mesotherapy-face.html" data-i18n="nav.face.mesotherapy">מזותרפיה לפנים</a>
             <a href="${ROOT}treatments/pigmentation.html" data-i18n="nav.face.pigmentation">טיפולי פיגמנטציה</a>
             <a href="${ROOT}treatments/acne.html" data-i18n="nav.face.acne">טיפול באקנה ופוסט אקנה</a>
+            <a href="${ROOT}treatments/face-sculpting.html">פיסול פנים רפואי</a>
           </div>
         </div>
         <div class="nav-item">
@@ -124,6 +125,7 @@ function getHeader(activePage) {
       <a href="${ROOT}treatments/mesotherapy-face.html" data-i18n="nav.face.mesotherapy">מזותרפיה לפנים</a>
       <a href="${ROOT}treatments/pigmentation.html" data-i18n="nav.face.pigmentation">טיפולי פיגמנטציה</a>
       <a href="${ROOT}treatments/acne.html" data-i18n="nav.face.acne">טיפול באקנה ופוסט אקנה</a>
+      <a href="${ROOT}treatments/face-sculpting.html">פיסול פנים רפואי</a>
     </div>
   </div>
   <div class="mobile-nav-item" id="mob-hair">
